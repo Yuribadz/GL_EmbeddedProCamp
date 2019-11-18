@@ -1,68 +1,41 @@
 #include <stdio.h>
 #include <stdint.h>
+#include "swap.h"
 
-/**
- * Function exchanges contents of two uint16_t numbers.
- * @param first The pointer of first number for exchange
- * @param second The pointer of second number for exchange
- */
-void swap16(uint16_t *first, uint16_t* second)
+void swap16(uint16_t *value)
 {
-	uint16_t temporary = 0;
-	temporary = *second;
-	*second = *first;
-	*first = temporary;
+  *value = (((*value) >> 8) & 0x00FF) | 
+      (((*value) << 8) & 0xFF00);
 }
 
-/**
- * Function exchanges contents of two uint32_t numbers.
- * @param first The pointer of first number for exchange
- * @param second The pointer of second number for exchange
- */
-void swap32(uint32_t *first, uint32_t* second)
+void swap32(uint32_t *value)
 {
-	uint32_t temporary = 0;
-	temporary = *second;
-	*second = *first;
-	*first = temporary;
+  *value = (((*value >> 24) & 0x000000ff) | 
+      ((*value >>8) & 0x0000ff00) |
+      ((*value <<8) & 0x00ff0000) | 
+      ((*value <<24) & 0xff000000));
 }
 
-/**
- * Function exchanges contents of two uint64_t numbers.
- * @param first The pointer of first number for exchange
- * @param second The pointer of second number for exchange
- */
-void swap64(uint64_t *first, uint64_t* second)
+void swap64(uint64_t *value)
 {
-	uint64_t temporary = 0;
-	temporary = *second;
-	*second = *first;
-	*first = temporary;
+    *value = (((*value) >> 56) & 0x00000000000000FF) |
+    (((*value) >> 40) & 0x000000000000FF00) |
+	  (((*value) >> 24) & 0x0000000000FF0000) |
+    (((*value) >>  8) & 0x00000000FF000000) |
+	  (((*value) <<  8) & 0x000000FF00000000) |
+    (((*value) << 24) & 0x0000FF0000000000) |
+	  (((*value) << 40) & 0x00FF000000000000) |
+    (((*value) << 56) & 0xFF00000000000000);
 }
 
-int main(int argc, char *argv[])
-{
-	uint16_t testOne16 = 5, testTwo16 = 6;
-	uint32_t testOne32 = 10, testTwo32 = 11;
-	uint64_t testOne64 = 15, testTwo64 = 16;
-
-	printf("Swapping uint16_t numbers %u and %u\n",
-		   testOne16, testTwo16);
-	swap16(&testOne16, &testTwo16);
-	printf("Swap result for uint32_t is %u and %u\n",
-		   testOne16, testTwo16);
-
-	printf("Swapping uint32_t numbers %u and %u\n",
-		   testOne32, testTwo32);
-	swap32(&testOne32, &testTwo32);
-	printf("Swap result is %u and %u\n",
-		   testOne32, testTwo32);
-
-	printf("Swapping uint64_t numbers %lu and %lu\n",
-		   testOne64, testTwo64);
-	swap64(&testOne64, &testTwo64);
-	printf("Swap result is %lu and %lu\n",
-		   testOne64, testOne64);
-
-	return 0;
+int main(void) {
+    uint16_t endian16 = 0xaabb;
+    uint32_t endian32 = 0xaabbccdd;
+    uint64_t endian64 = 0xaabbccddeeffffff;
+    swap16(&endian16);
+    printf("\n Endian 16 bit swap = 0x%X\n", endian16);
+    swap32(&endian32);
+	  printf("\n Endian 32 bit swap = 0x%X\n", endian32);
+    swap64(&endian64);
+    printf("\n Endian 64 bit swap = 0x%lX\n", endian64);
 }
