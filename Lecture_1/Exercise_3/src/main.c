@@ -1,24 +1,12 @@
 #include <stdio.h>
+#include "rectangle.h"
 
-#define INCH 0.0254
 
-/**
- * The function calculates rectangle perimeter in inches.
- * @param height double number represents height of rectangle
- * @param width double number represents width of rectangle
- * @return The perimeter of rectangle
- */
 double rect_perimeter(double height, double width)
 {
 	return (2*(height +  width)) / INCH;
 }
 
-/**
- * The function calculates rectangle area in inches.
- * @param height double number represents height of rectangle
- * @param width double number represents width of rectangle
- * @return The area of rectangle
- */
 double rect_area(double height, double width)
 {
 	return (height * width) / INCH;
