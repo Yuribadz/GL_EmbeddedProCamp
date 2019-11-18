@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "divider.h"
 /**
  * The function divides every number in range from 1 to 500 and prints it.
  * @param divider double number represends divider for numbers in range
