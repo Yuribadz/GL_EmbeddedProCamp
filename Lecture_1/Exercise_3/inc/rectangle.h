@@ -2,8 +2,8 @@
 #define RECTANGLE_H
 
 /**
-* @brief Represents meters in inch
-*/
+ * @brief Represents meters in inch
+ */
 #define INCH 0.0254
 
 /**

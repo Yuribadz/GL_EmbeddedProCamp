@@ -2,8 +2,8 @@
 #define FACTORIAL_H
 
 /**
-* Constant which represents factorial number to be calculated.
-*/
+ * Constant which represents factorial number to be calculated.
+ */
 #define NUMBER 10
 
 /**

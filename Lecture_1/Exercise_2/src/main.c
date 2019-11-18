@@ -5,8 +5,8 @@
 uint16_t convert(uint32_t pixel)
 {
 	return (((pixel & RED_MASK) >> RED_SHIFT) +
-			((pixel & GREEN_MASK) >> GREEN_SHIFT) +
-			((pixel & BLUE_MASK) >> BLUE_SHIFT));
+		((pixel & GREEN_MASK) >> GREEN_SHIFT) +
+		((pixel & BLUE_MASK) >> BLUE_SHIFT));
 }
 
 int main(int argc, char *argv[])

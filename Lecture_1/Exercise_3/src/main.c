@@ -28,9 +28,9 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 	printf("Rectangle perimeter is %lf\n",
-		   rect_perimeter(height,width));
+		rect_perimeter(height,width));
 	printf("Rectangle area is %lf\n",
-		   rect_area(height,width));
+		rect_area(height,width));
 
 	return 0;
 }

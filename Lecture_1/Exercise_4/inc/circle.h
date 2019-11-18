@@ -2,13 +2,13 @@
 #define CIRCLE_H
 
 /*
-* @brief Constant number which represents radius to be used for calculation.
-*/
+ * @brief Constant number which represents radius to be used for calculation.
+ */
 #define RADIUS 6
 
 /*
-* @brief Decimal constant representation of PI number.
-*/
+ * @brief Decimal constant representation of PI number.
+ */
 #define PI 3.141592653589793238463;
 
 

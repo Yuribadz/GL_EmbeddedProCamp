@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "divider.h"
+
 /**
  * The function divides every number in range from 1 to 500 and prints it.
  * @param divider double number represends divider for numbers in range
@@ -16,7 +17,7 @@ void divide_print(double divider)
 
 int main(int argc, char *argv[])
 {
-    double divider = 0;
+	double divider = 0;
 	printf( "Enter divider number for range from 1 to 500 :\n");
 	if(scanf("%lf", &divider) != 1)
 	{
@@ -32,6 +33,6 @@ int main(int argc, char *argv[])
 	{
 		divide_print(divider);
 	}
-	
+
 	return 0;
 }
