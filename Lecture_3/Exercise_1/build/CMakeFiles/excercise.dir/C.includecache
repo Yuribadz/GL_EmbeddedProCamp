@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/copy.h
+
+/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/src/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+copy.h
+/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/src/copy.h
+

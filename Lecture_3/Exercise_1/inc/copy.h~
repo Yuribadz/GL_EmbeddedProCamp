@@ -1,0 +1,14 @@
+#ifndef STRCOPY_H
+#define STRCOPY_H
+
+/**
+ * Function one string into other.
+ * @param input C string to copy.
+ * @param output C string copy destination.
+ * @return int number which indicates error code -1 if output size is too
+ *         small to store all characters from input string, 0 indicates success.
+ */
+void str_copy(char* input, char* output);
+
+
+#endif

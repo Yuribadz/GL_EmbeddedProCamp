@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dab94/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dab94.dir/build.make CMakeFiles/cmTC_dab94.dir/build
+make[1]: входимо до каталогу «/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_dab94.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_dab94.dir/CheckSymbolExists.c.o   -c /home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dab94
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dab94.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_dab94.dir/CheckSymbolExists.c.o  -o cmTC_dab94 
+/usr/bin/ld: CMakeFiles/cmTC_dab94.dir/CheckSymbolExists.c.o: у функції «main»:
+CheckSymbolExists.c:(.text+0x1b): невизначене посилання «pthread_create»
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_dab94.dir/build.make:87: cmTC_dab94] Помилка 1
+make[1]: Залишаю каталог "/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp"
+make: *** [Makefile:121: cmTC_dab94/fast] Помилка 2
+
+File /home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_100ca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_100ca.dir/build.make CMakeFiles/cmTC_100ca.dir/build
+make[1]: входимо до каталогу «/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_100ca.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_100ca.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_100ca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_100ca.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_100ca.dir/CheckFunctionExists.c.o  -o cmTC_100ca -lpthreads 
+/usr/bin/ld: не вдалося знайти -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_100ca.dir/build.make:87: cmTC_100ca] Помилка 1
+make[1]: Залишаю каталог "/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build/CMakeFiles/CMakeTmp"
+make: *** [Makefile:121: cmTC_100ca/fast] Помилка 2
+
+
