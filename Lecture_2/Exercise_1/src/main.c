@@ -26,7 +26,6 @@ int main(void)
 {
 	char input[50];
 	char output[50];
-	memset(output,0,strlen(output));
 	printf("Enter string : \n");
 	scanf("%s", input);
 	printf("You have entered : %s\n",input);
