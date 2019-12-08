@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/build",
-  "command": "/usr/bin/cc  -I/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/inc    -g -o CMakeFiles/excercise.dir/src/main.c.o   -c /home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/src/main.c",
-  "file": "/home/yuribadz/GL_EmbeddedProCamp/Lecture_3/Exercise_1/src/main.c"
-}
-]
